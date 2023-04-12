@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.primary {
+    --bg--default: #8257E5;
+    --bg--hover: #9674E5;
+    --border--focus: #D9CDF7;
+}
+
+.secondary {
+    --bg--default: #3C3748;
+    --bg--hover: #6A617F;
+    --border--focus: #D9CDF7;
+
+}
+
+.tertiary {
+    --bg--default: rgba(11, 9, 17, 0);
+    --bg--hover: #6A617F;
+    --border--focus: #D9CDF7;
+    outline: solid 2px #D9CDF7;
+}
+
+.tertiary:focus {
+    outline: solid 2px #9674E5;
+}
+
+body {
+    background-color: #130F1E;
+    display: grid;
+    place-content: center;
+    height: 100vh;
+    margin: 100px;
+}
+
+#app {
+    font-family: 'Inter';
+    background-color: #3c374877;
+    max-width: fit-content;
+    padding: 50px 80px;
+    border-radius: 25px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#app h1 {
+    font-size: 2.5em;
+    font-weight: 700;
+    color: white;
+    text-align: left;
+}
+
+#app p {
+    color: #D9CDF7;
+    font-size: 14px;
+    opacity: 0.5;
+    padding-top: 1px;
+    padding-left: 8px;
+}
+
+.context {
+    max-width: fit-content;
+}
+
+.context p {
+    max-width: 350px;
+}
+
+#box-buttons {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.content-buttons {
+    font-size: 0.8em;
+    color: #D9CDF7;
+    text-align: left;
+    padding-top: 16px;
+    display: grid;
+    gap: 16px;
+}
+
+.content-buttons h3 {
+    padding-left: 10px;
+}
+
+button {
+    background-color: var(--bg--default);
+    font-family: 'Inter';
+    border: 0;
+    color: white;
+    padding: 12px 24px;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 24px;
+    border-radius: 24px;
+    transition: 0.3;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+button:hover {
+    background-color: var(--bg--hover);
+    transition: 0.3s;
+    transition-delay: 0.05s;
+}
+
+button:focus {
+    outline: 2px solid var(--border--focus);
+}
+
+button:disabled {
+    background-color: var(--bg--default);
+    opacity: 0.56;
+    cursor: not-allowed;
+}
+
+.loading {
+    cursor: progress;
+}
+
+.loading i {
+    font-size: 16px;
+    animation: spin 700ms infinite linear;
+}
+
+.movable {
+    cursor: move;
+}
+
+.movable i {
+    font-size: 18px;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
