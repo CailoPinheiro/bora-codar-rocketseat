@@ -31,15 +31,17 @@ body {
 #app {
     background-color: #292738;
     /* grid-template-columns: max-content max-content max-content; */
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 29.6rem max-content max-content;
     grid-template-rows: max-content;
     column-gap: 3.2rem;
     row-gap: 5.9rem;
 
-    width: 100vw;
-    height: 100vh;
+    /*width: fit-content;*/
+    min-width: 100vh;
+    height: fit-content;
+    min-height: 100vh;
 
-    padding: 11.2rem 12.3rem;
+    place-content: center;
 }
 
 .box:nth-child(4) {
@@ -53,6 +55,8 @@ body {
 }
 
 .bottom {
+    font-weight: 500;
+    font-size: 1.4rem;
     display: flex;
     gap: 2rem;
     justify-content: center;
@@ -61,11 +65,42 @@ body {
 
 .bottom .item {
     display: flex;
+    align-items: center;
     gap: 1rem;
 }
 
+
+.bottom .item span {
+    --bg-color: #4A4556;
+}
+
+
+.item #sell-alcancado {
+    --bg-color: linear-gradient(121.94deg, #CE9FFC 15.98%, #7367F0 82.85%);
+    border-radius: 999px;
+}
+
+.item #target-alcancado {
+    --bg-color: linear-gradient(121.94deg, #DF9780 15.98%, #A66DE9 82.85%);
+    border-radius: 999px;
+}
+
+.bottom .item span:nth-child(1){
+    display: flex;
+    align-items: center;
+    gap:0.4rem;
+}
+
+.bottom .item span:nth-child(1)::before {
+    content: "";
+    width: 1.5rem;
+    height: 1.5rem;
+    display: block;
+    background: var(--bg-color);
+    border-radius: 999px;
+}
+
 .nps {
-    width: 29.6rem;
     gap: 3.2rem;
 }
 
@@ -78,8 +113,5 @@ body {
 }
 
 .nps .bottom {
-    font-weight: 500;
-    font-size: 1.4rem;
-    justify-content: center;
     gap: 1rem;
 }
