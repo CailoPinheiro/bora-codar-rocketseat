@@ -38,12 +38,10 @@ body {
 #app {
     column-gap: 3.2rem;
     row-gap: 5.9rem;
-    /* min-width: 100vh; */
     height: fit-content;
     min-height: 100vh;
     place-content: center;
     padding: 3.2rem;
-    margin: auto;
 }
 
 .top {
@@ -221,9 +219,10 @@ svg circle:nth-child(2) {
 }
 
 .bars {
+    place-content: center;
     display: flex;
     align-items: flex-end;
-    gap: calc(3vw + 2rem);
+    gap: calc(3vw + 1rem);
     /* gap: 5.9rem; */
     position: relative;
 }
