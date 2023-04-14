@@ -8,8 +8,9 @@
 
 :root {
     font-size: 62.5%;
+    
 }
-
+  
 body {
     font-size: 1.6rem;
     font-family: 'Inter';
@@ -82,10 +83,10 @@ body {
     border-radius: 999px;
 }
 
-.bottom .item span:nth-child(1){
+.bottom .item span:nth-child(1) {
     display: flex;
     align-items: center;
-    gap:0.4rem;
+    gap: 0.4rem;
 }
 
 .bottom .item span:nth-child(1)::before {
@@ -114,26 +115,56 @@ body {
 }
 
 .middle {
+    position: relative;
     display: grid;
     place-content: center;
 }
 
 svg {
+    --circunference: 618;
+    --percentage: 0;
     width: 19.7rem;
     height: 19.7rem;
+    transform: rotate(-90deg);
 }
 
 svg circle {
-    stroke-dasharray: 618;
-    stroke-dashoffset: 618;
+    stroke-dasharray: var(--circunference);
+    stroke-dashoffset: var(--circunference);
     stroke-width: 35;
     fill: none;
 }
 
-svg circle:nth-child(1){
+svg circle:nth-child(1) {
     stroke-dashoffset: 0;
 }
 
-svg circle:nth-child(2){
-    stroke-dashoffset: calc(618 - (618 * 30/100));
+svg circle:nth-child(2) {
+    stroke-dashoffset: calc(var(--circunference) - (var(--circunference) * var(--percentage))/100);
+    stroke-linecap: round;
+    animation: progress 1s ease-in-out forwards;
+    animation-delay: 1s;
+}
+
+@keyframes progress {
+    0% {
+        stroke-dasharray: var(--circunference);
+        stroke-dashoffset: var(--circunference);
+    }   
+}
+
+.middle .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content h3 {
+    font-size: 2.4rem;
+}
+
+.content p {
+    font-size: 1.2rem;
 }

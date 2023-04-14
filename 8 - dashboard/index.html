@@ -28,7 +28,8 @@
         <div class="box sell grid">
             <div class="top">Vendas fechadas</div>
             <div class="middle">
-                <svg viewBox="0 0 232 232">
+
+                <svg viewBox="0 0 232 232" style="--percentage: 70">
                     <circle cx="50%" cy="50%" r="98.5" opacity="0.1" stroke="black" />
                     <circle cx="50%" cy="50%" r="98.5" stroke=url(#paint0_linear_201_85) />
                     <defs>
@@ -39,11 +40,17 @@
                         </linearGradient>
                     </defs>
                 </svg>
+
+                <div class="content">
+                    <h3>70%</h3>
+                    <p>Alcançada</p>
+                </div>
+
             </div>
             <div class="bottom">
                 <div class="item">
                     <span>Esperado</span>
-                    <span>10</span>
+                    <span>100</span>
                 </div>
                 <div class="item">
                     <span id="sell-alcancado">Alcançado</span>
@@ -53,7 +60,26 @@
         </div>
         <div class="box target grid">
             <div class="top">Meta mensal</div>
-            <div class="middle"></div>
+            <div class="middle">
+
+                <svg viewBox="0 0 232 232" style="--percentage: 90">
+                    <circle cx="50%" cy="50%" r="98.5" opacity="0.1" stroke="black" />
+                    <circle cx="50%" cy="50%" r="98.5" stroke=url(#paint0_linear_201_104) />
+                    <defs>
+                        <linearGradient id="paint0_linear_201_104" x1="1.97421e-07" y1="82" x2="154" y2="178" 
+                        gradientUnits="userSpaceOnUse">    
+                        <stop stop-color="#DF9780"/>
+                        <stop offset="1" stop-color="#A66DE9"/>
+                        </linearGradient>
+                    </defs>
+                </svg>
+
+                <div class="content">
+                    <h3>90%</h3>
+                    <p>Alcançada</p>
+                </div>
+
+            </div>
             <div class="bottom">
                 <div class="item">
                     <span>Esperado</span>
@@ -65,6 +91,8 @@
                 </div>
             </div>
         </div>
+
+        <div class="box weekly-sell"></div>
     </main>
 </body>
 </html>
